@@ -13,5 +13,9 @@ $(document).ready(function () {
         alert(showHTML);
     })
 
+    $("#btn-val").click(function () {
+      let showVal = $("#ipt").val()
+      alert(showVal);
+    })
 
 });
