@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <form action="">
+        <label for="">Username or email:</label> <br />
+        <input
+          type="text"
+          placeholder="Username or Email"
+          id="userName"
+          style="margin: 10px 0"
+        />
+        <br />
+        <label for="">Password:</label><br />
+        <input
+          type="password"
+          placeholder="Password"
+          id="password"
+          style="margin: 10px 0"
+        /><br />
+        <button type="submit" id="btn">Login</button><br />
+      </form>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+  $("#btn").click(function (e) {
+    e.preventDefault();
+    var userName = $("#userName").val();
+    var password = $("#password").val();
+
+    const loginRequestModel = {
+      userNameOrEmail: userName,
+      password: password,
+    };
+    // console.log(data);
+    $.ajax({
+      url: "http://account.ezsharing.vn/api/authen/user/login",
+      type: "POST",
+      contentType: "application/json; charset=utf-8",
+      async: false,
+      headers: {},
+      data: JSON.stringify(loginRequestModel),
+      error: function (err) {
+        if (err.status === 401) {
+          //window.location.href = "/login";
+        }
+      },
+      success: function (data) {
+        console.log(data);
+      },
+    });
+  });
+});
+
+    </script>
+  </body>
+</html>
