@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Attributes</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $("button").click(function(){
+            let get_attr = $("#get-attr").attr("href")
+            alert(get_attr)
+        })
+    })
+</script>
+</head>
+<body>
+    <a href="https://www.facebook.com/LeHuyHung127" id="get-attr">Get Facebook</a>
+    <button>Get Attributes</button>
+</body>
+</html>
