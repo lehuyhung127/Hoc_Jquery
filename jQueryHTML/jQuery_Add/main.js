@@ -2,7 +2,7 @@
 $(document).ready(function () {
   // append
   $("#btn_append").click(function () {
-    $("#append_p").append("<b> 'Hiển thị ở cuối phần tử'</b>");
+    $("#append_p").append("<b> 'Hiển thị ở cuối phần tử </b>");
   });
 
   $("#btn_prepend").click(function () {
