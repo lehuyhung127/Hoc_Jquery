@@ -5,18 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Get and Set Css</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+      .important {
+        color: red;
+      }
+    </style>
   </head>
   <body>
     <h1>Tự học jQuery</h1>
-    <!-- addClass() -->
-    <h2>addClass() <b>CSS</b></h2>
-    <p>Set Css Element "p"</p>
-    <span>Set Css Element "h3"</span> <br />
-    <br />
+    <div>
+      <h2>addClass() <b>CSS</b></h2>
+      <p>Set Css Element "p"</p>
+      <br />
+      <span>Set Css Element "h3"</span> <br />
+      <br />
+    </div>
     <div>Set Css Element "div"</div>
     <button class="btn_addClassCss" style="margin: 10px 0">
       Add Class Css to Elements
     </button>
+    <button class="btn_removeClassCss" style="margin: 10px 0">
+      Remove Class Css to Element
+    </button>
+    <button class="btn_toggleClassCss">Toggle Class Css</button>
     <script src="./get_and_set_css.js"></script>
   </body>
 </html>
