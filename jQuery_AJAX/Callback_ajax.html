@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sử dụng callback trong ajax</title>
+</head>
+<body>
+    <div id="div1">
+        <h2>Sử dụng callback có tham số truyền vào</h2>
+    </div>
+    <button>Get External Content</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                $("#div1").load("./demo_test1.txt", function(responseTxt, statusTxt, xhr) {
+                    // console.log(statusText);
+                    if(statusTxt == "success") 
+                    alert("Loading content successfully")
+                if(statusTxt == "error")
+                alert("Error loading content " + xhr.status + ": " + xhr.statusText)
+                })
+            })
+        })
+    </script>
+</body>
+</html>
